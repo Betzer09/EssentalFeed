@@ -14,6 +14,7 @@
 		237E23D127B41555005EB1F4 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E23D027B41555005EB1F4 /* FeedItem.swift */; };
 		237E23D327B416AB005EB1F4 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E23D227B416AB005EB1F4 /* FeedLoader.swift */; };
 		2396391027C7043C0003D343 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396390F27C7043C0003D343 /* HTTPClient.swift */; };
+		2396391227C704740003D343 /* FeedItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396391127C704740003D343 /* FeedItemsMapper.swift */; };
 		23C6374627B49E0C00D31C3F /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6374527B49E0C00D31C3F /* RemoteFeedLoader.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		237E23D027B41555005EB1F4 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		237E23D227B416AB005EB1F4 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 		2396390F27C7043C0003D343 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		2396391127C704740003D343 /* FeedItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsMapper.swift; sourceTree = "<group>"; };
 		23C6374527B49E0C00D31C3F /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 			children = (
 				23C6374527B49E0C00D31C3F /* RemoteFeedLoader.swift */,
 				2396390F27C7043C0003D343 /* HTTPClient.swift */,
+				2396391127C704740003D343 /* FeedItemsMapper.swift */,
 			);
 			path = FeedAPI;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				23C6374627B49E0C00D31C3F /* RemoteFeedLoader.swift in Sources */,
 				2396391027C7043C0003D343 /* HTTPClient.swift in Sources */,
 				237E23D327B416AB005EB1F4 /* FeedLoader.swift in Sources */,
+				2396391227C704740003D343 /* FeedItemsMapper.swift in Sources */,
 				237E23D127B41555005EB1F4 /* FeedItem.swift in Sources */,
 				237E23BB27B414DE005EB1F4 /* EssentalFeed.docc in Sources */,
 			);
