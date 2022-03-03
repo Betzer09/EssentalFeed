@@ -1,6 +1,6 @@
 os: osx
-osx_image: osx_image: xcode13.2
-laguage: swift
+osx_image: xcode13.2
+language: swift
 script: xcodebuild clean build test -project EssentalFeed.xcodeproj -scheme "CI" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
 
