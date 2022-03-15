@@ -30,7 +30,7 @@ class RemoteFeedLoaderTests: XCTestCase {
         let url = URL(string: "www.strides.dev")!
         let client = HTTPClientSpy()
         let remoteFeedLoader = makeSUT(url: url, client: client)
-        
+         
         remoteFeedLoader.sut.load { _ in}
         remoteFeedLoader.sut.load { _ in}
         
