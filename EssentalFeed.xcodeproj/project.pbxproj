@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2351F18527E15CA400B55F53 /* CacheFeedUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2351F18427E15CA400B55F53 /* CacheFeedUseCaseTests.swift */; };
 		237E23BB27B414DE005EB1F4 /* EssentalFeed.docc in Sources */ = {isa = PBXBuildFile; fileRef = 237E23BA27B414DE005EB1F4 /* EssentalFeed.docc */; };
 		237E23BC27B414DE005EB1F4 /* EssentalFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 237E23B927B414DE005EB1F4 /* EssentalFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		237E23C927B41536005EB1F4 /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E23C827B41536005EB1F4 /* RemoteFeedLoaderTests.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2351F18427E15CA400B55F53 /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
 		237E23B627B414DE005EB1F4 /* EssentalFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentalFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		237E23B927B414DE005EB1F4 /* EssentalFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentalFeed.h; sourceTree = "<group>"; };
 		237E23BA27B414DE005EB1F4 /* EssentalFeed.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = EssentalFeed.docc; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2351F18327E15C8D00B55F53 /* FeedCache */ = {
+			isa = PBXGroup;
+			children = (
+				2351F18427E15CA400B55F53 /* CacheFeedUseCaseTests.swift */,
+			);
+			path = FeedCache;
+			sourceTree = "<group>";
+		};
 		237E23AC27B414DE005EB1F4 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				23B3E6FC27CE695E0049D7D0 /* Helpers */,
+				2351F18327E15C8D00B55F53 /* FeedCache */,
 				2396391327C709EC0003D343 /* FeedAPI */,
 			);
 			path = EssentalFeedTests;
@@ -325,6 +336,7 @@
 			files = (
 				237E23C927B41536005EB1F4 /* RemoteFeedLoaderTests.swift in Sources */,
 				23B3E6FE27CE69800049D7D0 /* XCTestCase+MemeoryLeakTrackingHelper.swift in Sources */,
+				2351F18527E15CA400B55F53 /* CacheFeedUseCaseTests.swift in Sources */,
 				23B3E6A327CA8CC00049D7D0 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
