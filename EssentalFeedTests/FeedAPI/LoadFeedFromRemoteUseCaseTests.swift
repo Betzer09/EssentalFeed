@@ -8,7 +8,7 @@
 import XCTest
 import EssentalFeed
 
-class URLSessionHTTPClientTests: XCTestCase {
+class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
