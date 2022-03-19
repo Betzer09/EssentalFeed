@@ -1,26 +1,27 @@
 //
-//  LocalFeedItem.swift
+//  FeedItem.swift
 //  EssentalFeed
 //
-//  Created by Austin Betzer on 3/19/22.
+//  Created by Austin Betzer on 2/9/22.
 //
 
 import Foundation
 
-// Data Transfer Object Pattern
-public struct LocalFeedItem: Equatable {
+public struct FeedImage: Equatable {
     public let id: UUID
     public let description: String?
     public let location: String?
-    public let imageURL: URL
+    public let url: URL
     
     public init(id: UUID,
                 description: String?,
                 location: String?,
-                imageURL: URL) {
+                url: URL) {
         self.id = id
         self.description = description
         self.location = location
-        self.imageURL = imageURL
+        self.url = url
     }
 }
+
+

@@ -12,16 +12,16 @@ class EssentalFeedAPIEndToEndTests: XCTestCase {
     
     func test_endToEndTestServerGETFeedResult_MatchesFixedTestAccountData() {
         switch getFeedResult() {
-        case let .success(items):
-            XCTAssertEqual(items.count, 8)
+        case let .success(imageFeed):
+            XCTAssertEqual(imageFeed.count, 8)
             
-            XCTAssertEqual(items[1], expectedItem(at: 1), "Unexpected item values at index: \(String(describing: index))")
-            XCTAssertEqual(items[2], expectedItem(at: 2), "Unexpected item values at index: \(String(describing: index))")
-            XCTAssertEqual(items[3], expectedItem(at: 3), "Unexpected item values at index: \(String(describing: index))")
-            XCTAssertEqual(items[4], expectedItem(at: 4), "Unexpected item values at index: \(String(describing: index))")
-            XCTAssertEqual(items[5], expectedItem(at: 5), "Unexpected item values at index: \(String(describing: index))")
-            XCTAssertEqual(items[6], expectedItem(at: 6), "Unexpected item values at index: \(String(describing: index))")
-            XCTAssertEqual(items[7], expectedItem(at: 7), "Unexpected item values at index: \(String(describing: index))")
+            XCTAssertEqual(imageFeed[1], expectedImage(at: 1), "Unexpected item values at index: \(String(describing: index))")
+            XCTAssertEqual(imageFeed[2], expectedImage(at: 2), "Unexpected item values at index: \(String(describing: index))")
+            XCTAssertEqual(imageFeed[3], expectedImage(at: 3), "Unexpected item values at index: \(String(describing: index))")
+            XCTAssertEqual(imageFeed[4], expectedImage(at: 4), "Unexpected item values at index: \(String(describing: index))")
+            XCTAssertEqual(imageFeed[5], expectedImage(at: 5), "Unexpected item values at index: \(String(describing: index))")
+            XCTAssertEqual(imageFeed[6], expectedImage(at: 6), "Unexpected item values at index: \(String(describing: index))")
+            XCTAssertEqual(imageFeed[7], expectedImage(at: 7), "Unexpected item values at index: \(String(describing: index))")
             
         case let .failure(error)?:
             XCTFail("Expected successful feed result, got \(error) instead")
@@ -51,11 +51,11 @@ class EssentalFeedAPIEndToEndTests: XCTestCase {
         return receivedResult
     }
     
-    private func expectedItem(at index: Int) -> FeedItem {
-        return FeedItem(id: id(at: index),
+    private func expectedImage(at index: Int) -> FeedImage {
+        return FeedImage(id: id(at: index),
                         description: description(at: index),
                         location: location(at: index),
-                        imageURL: imageURL(at: index))
+                        url: imageURL(at: index))
         
     }
     
