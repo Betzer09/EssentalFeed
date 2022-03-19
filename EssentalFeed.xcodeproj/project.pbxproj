@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		234AEDD027E62DC200B46E7F /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AEDCF27E62DC200B46E7F /* LocalFeedLoader.swift */; };
 		234AEDD227E62E0A00B46E7F /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AEDD127E62E0A00B46E7F /* FeedStore.swift */; };
+		234AEDD427E6386900B46E7F /* RemoteFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AEDD327E6386900B46E7F /* RemoteFeedItem.swift */; };
 		2351F18527E15CA400B55F53 /* CacheFeedUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2351F18427E15CA400B55F53 /* CacheFeedUseCaseTests.swift */; };
 		237E23BB27B414DE005EB1F4 /* EssentalFeed.docc in Sources */ = {isa = PBXBuildFile; fileRef = 237E23BA27B414DE005EB1F4 /* EssentalFeed.docc */; };
 		237E23BC27B414DE005EB1F4 /* EssentalFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 237E23B927B414DE005EB1F4 /* EssentalFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		234AEDCF27E62DC200B46E7F /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
 		234AEDD127E62E0A00B46E7F /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
+		234AEDD327E6386900B46E7F /* RemoteFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedItem.swift; sourceTree = "<group>"; };
 		2351F18427E15CA400B55F53 /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
 		237E23B627B414DE005EB1F4 /* EssentalFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentalFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		237E23B927B414DE005EB1F4 /* EssentalFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentalFeed.h; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				2396390F27C7043C0003D343 /* HTTPClient.swift */,
 				2396391127C704740003D343 /* FeedItemsMapper.swift */,
 				23B3E6FF27CE785D0049D7D0 /* URLSessionHTTPClient.swift */,
+				234AEDD327E6386900B46E7F /* RemoteFeedItem.swift */,
 			);
 			path = FeedAPI;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				2396391027C7043C0003D343 /* HTTPClient.swift in Sources */,
 				237E23D327B416AB005EB1F4 /* FeedLoader.swift in Sources */,
 				2396391227C704740003D343 /* FeedItemsMapper.swift in Sources */,
+				234AEDD427E6386900B46E7F /* RemoteFeedItem.swift in Sources */,
 				237E23D127B41555005EB1F4 /* FeedItem.swift in Sources */,
 				234AEDD027E62DC200B46E7F /* LocalFeedLoader.swift in Sources */,
 				237E23BB27B414DE005EB1F4 /* EssentalFeed.docc in Sources */,
