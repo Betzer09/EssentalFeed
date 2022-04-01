@@ -50,6 +50,11 @@ class FeedStoreSpy: FeedStore {
     func completeRetrieval(with error: NSError?, at index: Int = 0) {
         loadCompletions[index](error)
     }
+    func completeRetrievalWithEmptyCache(at index: Int = 0) {
+        loadCompletions[index](nil)
+    }
+    
+    
     
     func insert(_ items: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
         insertionCompletions.append(completion)
