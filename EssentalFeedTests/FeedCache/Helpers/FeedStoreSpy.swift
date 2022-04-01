@@ -10,11 +10,6 @@ import EssentalFeed
 
 class FeedStoreSpy: FeedStore {
     
-    typealias DeletionCompletion = (Error?) -> Void
-    typealias InsertionCompletion = (Error?) -> Void
-    typealias LoadCompletion = (Error?) -> Void
-    
-    
     private var deletionCompletions = [DeletionCompletion]()
     private var insertionCompletions = [InsertionCompletion]()
     private var loadCompletions = [LoadCompletion]()
@@ -47,22 +42,25 @@ class FeedStoreSpy: FeedStore {
         deletionCompletions[index](error)
     }
     
-    func completeRetrieval(with error: NSError?, at index: Int = 0) {
-        loadCompletions[index](error)
-    }
-    func completeRetrievalWithEmptyCache(at index: Int = 0) {
-        loadCompletions[index](nil)
-    }
-    
-    
-    
     func insert(_ items: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
         insertionCompletions.append(completion)
         receivedMessages.append(.insert(items, timestamp))
     }
     
+    func completeRetrieval(with error: Error, at index: Int = 0) {
+        loadCompletions[index](.failure(error))
+    }
+    
+    func completeRetrievalWithEmptyCache(at index: Int = 0) {
+        loadCompletions[index](.empty)
+    }
+    
     func retrieve(completion: @escaping LoadCompletion) {
         loadCompletions.append(completion)
         receivedMessages.append(.retrieve)
+    }
+    
+    func completeRetrieval(with feed: [LocalFeedImage], timestamp: Date, at index: Int = 0) {
+        loadCompletions[index](.found(feed: feed, timestamp: timestamp))
     }
 }
