@@ -98,6 +98,15 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
         wait(for: [exp], timeout: 1.0)
     }
     
+    func test_load_deletesDoesNotCacheOnRetrievalError() {
+        let (sut, store) = makeSUT()
+        
+        sut.load(completion: {_ in })
+        
+        store.completeRetrievalWithEmptyCache()
+        XCTAssertEqual(store.receivedMessages, [.retrieve])
+    }
+    
     func test_load_deletesCacheOnRetrievalError() {
         let (sut, store) = makeSUT()
         
