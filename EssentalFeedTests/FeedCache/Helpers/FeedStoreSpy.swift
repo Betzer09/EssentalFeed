@@ -12,7 +12,7 @@ class FeedStoreSpy: FeedStore {
     
     private var deletionCompletions = [DeletionCompletion]()
     private var insertionCompletions = [InsertionCompletion]()
-    private var loadCompletions = [LoadCompletion]()
+    private var loadCompletions = [RetrievalCompletion]()
     
     enum ReceivedMessage: Equatable {
         case deleteCacheFeed
@@ -55,7 +55,7 @@ class FeedStoreSpy: FeedStore {
         loadCompletions[index](.empty)
     }
     
-    func retrieve(completion: @escaping LoadCompletion) {
+    func retrieve(completion: @escaping RetrievalCompletion) {
         loadCompletions.append(completion)
         receivedMessages.append(.retrieve)
     }
