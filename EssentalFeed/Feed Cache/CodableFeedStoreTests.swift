@@ -69,13 +69,13 @@ class CodableFeedStoreTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        let storeURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("image-feed.store")
+        let storeURL = testSpecificStoreURL()
         try? FileManager.default.removeItem(at: storeURL)
     }
     
     override func tearDown() {
         super.tearDown()
-        let storeURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("image-feed.store")
+        let storeURL = testSpecificStoreURL()
         try? FileManager.default.removeItem(at: storeURL)
     }
 
