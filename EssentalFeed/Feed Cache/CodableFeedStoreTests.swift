@@ -114,14 +114,22 @@ class CodableFeedStoreTests: XCTestCase {
     }
     
     func test_retrieve_deliversFailureOnRetrievalError() {
-        let sut = makeSUT()
+        let storeURL = testSpecificStoreURL()
+        let sut = makeSUT(storeURL: storeURL)
         
-        try! "invalid Data".write(to: testSpecificStoreURL(), atomically: false, encoding: .utf8)
+        try! "invalid Data".write(to: storeURL, atomically: false, encoding: .utf8)
         
         expect(sut, toRetrieve: .failure(anyNSError()))
     }
     
     // MARK: - Helpers
+    
+    private func makeSUT(storeURL: URL? = nil, file: StaticString = #filePath, line: UInt = #line) -> CodableFeedStore {
+        let sut = CodableFeedStore(storeURL: storeURL ?? testSpecificStoreURL())
+        trackForMemoryLeak(sut, file: file, line: line)
+        return sut
+    }
+    
     private func insert(_ cache: (feed: [LocalFeedImage], timestamp: Date), to sut: CodableFeedStore) {
         let exp = expectation(description: "wait for cache inseration")
         sut.insert(cache.feed, timestamp: cache.timestamp) { insertionError in
@@ -157,13 +165,6 @@ class CodableFeedStoreTests: XCTestCase {
         }
         
         wait(for: [exp], timeout: 1.0)
-    }
-    
-    
-    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> CodableFeedStore {
-        let sut = CodableFeedStore(storeURL: testSpecificStoreURL())
-        trackForMemoryLeak(sut, file: file, line: line)
-        return sut
     }
     
     private func testSpecificStoreURL() -> URL {
