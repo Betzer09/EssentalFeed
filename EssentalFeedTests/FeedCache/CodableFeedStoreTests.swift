@@ -20,7 +20,7 @@ class CodableFeedStoreTests: XCTestCase, FeedStoreSpecs, FailableFeedStoreSpecs 
         super.tearDown()
         undoStoreSideEffects()
     }
-
+    
     func test_retrieve_deliversEmptyOnEmptyCache() {
         let sut = makeSUT()
         assertThatRetrieveDeliversEmptyOnEmptyCache(on: sut)
@@ -44,7 +44,7 @@ class CodableFeedStoreTests: XCTestCase, FeedStoreSpecs, FailableFeedStoreSpecs 
     func test_retrieve_hasNoSideEffectsOnNonEmptyCache() {
         let sut = makeSUT()
         assertThatRetrieveHasNoSideEffectsOnNonEmptyCache(on: sut)
-            
+        
     }
     
     func test_retrieve_deliversFailureOnRetrievalError() {
@@ -54,7 +54,7 @@ class CodableFeedStoreTests: XCTestCase, FeedStoreSpecs, FailableFeedStoreSpecs 
         try! "invalid Data".write(to: storeURL, atomically: false, encoding: .utf8)
         
         assertThatRetrieveDeliversFailureOnRetrievalError(on: sut)
-
+        
     }
     
     func test_retrieve_hasNoSideEffectsOnFailure() {
@@ -67,10 +67,10 @@ class CodableFeedStoreTests: XCTestCase, FeedStoreSpecs, FailableFeedStoreSpecs 
     }
     
     func test_insert_deliversNoErrorOnEmptyCache() {
-            let sut = makeSUT()
-
+        let sut = makeSUT()
+        
         assertThatInsertDeliversNoErrorOnEmptyCache(on: sut)
-        }
+    }
     
     func test_insert_overridesPreviouslyInsertedCacheValues() {
         let sut = makeSUT()
@@ -80,32 +80,22 @@ class CodableFeedStoreTests: XCTestCase, FeedStoreSpecs, FailableFeedStoreSpecs 
     func test_insert_deliversNoErrorOnNonEmptyCache() {
         let sut = makeSUT()
         insert((uniqueImageFeed().local, Date()), to: sut)
-
+        
         let insertionError = insert((uniqueImageFeed().local, Date()), to: sut)
-
+        
         XCTAssertNil(insertionError, "Expected to override cache successfully")
     }
     
     func test_insert_deliversErrorOnInsertionError() {
         let invalidStoreURL = URL(string: "invalid://store-url")
         let sut = makeSUT(storeURL: invalidStoreURL)
-        let feed = uniqueImageFeed().local
-        let timestamp = Date()
-        
-        let insertionError = insert((feed, timestamp), to: sut)
-        
-        XCTAssertNotNil(insertionError, "expected cache insertion to fail with an error")
+        assertThatInsertDeliversErrorOnInsertionError(on: sut)
     }
     
     func test_insert_hasNoSideEffectsOnInsertionError() {
         let invalidStoreURL = URL(string: "invalid://store-url")!
-            let sut = makeSUT(storeURL: invalidStoreURL)
-            let feed = uniqueImageFeed().local
-            let timestamp = Date()
-
-            insert((feed, timestamp), to: sut)
-
-            expect(sut, toRetrieve: .empty)
+        let sut = makeSUT(storeURL: invalidStoreURL)
+        assertThatInsertHasNoSideEffectsOnInsertionError(on: sut)
     }
     
     func test_delete_hasNoSideEffectsOnEmptyCache() {
@@ -129,7 +119,7 @@ class CodableFeedStoreTests: XCTestCase, FeedStoreSpecs, FailableFeedStoreSpecs 
         let sut = makeSUT()
         assertThatDeleteEmptiesPreviouslyInsertedCache(on: sut)
     }
-
+    
     
     func test_delete_deliversErrorOnDeletionError() {
         let noDeletePermissionURL = noDeletePermissionURL()
@@ -144,9 +134,9 @@ class CodableFeedStoreTests: XCTestCase, FeedStoreSpecs, FailableFeedStoreSpecs 
     func test_delete_hasNoSideEffectsOnDeletionError() {
         let noDeletePermissionURL = noDeletePermissionURL()
         let sut = makeSUT(storeURL: noDeletePermissionURL)
-
+        
         deleteCache(from: sut)
-
+        
         expect(sut, toRetrieve: .empty)
     }
     
@@ -166,7 +156,7 @@ class CodableFeedStoreTests: XCTestCase, FeedStoreSpecs, FailableFeedStoreSpecs 
     private func testSpecificStoreURL() -> URL {
         return cachesDirectory().appendingPathComponent("\(type(of: self)).store")
     }
-
+    
     private func cachesDirectory() -> URL {
         return FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
     }
@@ -186,5 +176,5 @@ class CodableFeedStoreTests: XCTestCase, FeedStoreSpecs, FailableFeedStoreSpecs 
     private func deleteStoreArtifacts() {
         try? FileManager.default.removeItem(at: testSpecificStoreURL())
     }
-
+    
 }
