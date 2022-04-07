@@ -139,7 +139,6 @@
 				236B57D027FB5C6B00CC9EDF /* ValidateFeedCacheUseCaseTests.swift */,
 				232BBFD027FCA81A00862824 /* CodableFeedStoreTests.swift */,
 				232BC0B927FF58E900862824 /* FeedStoreSpecs.swift */,
-				232BC0BD27FF5A9400862824 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift */,
 			);
 			path = FeedCache;
 			sourceTree = "<group>";
@@ -150,6 +149,7 @@
 				236B57BC27F76E2B00CC9EDF /* FeedStoreSpy.swift */,
 				236B57D227FB7E5C00CC9EDF /* FeedCacheTestHelpers.swift */,
 				232BC0BB27FF594300862824 /* XCTestCase+FeedStoreSpecs.swift */,
+				232BC0BD27FF5A9400862824 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
