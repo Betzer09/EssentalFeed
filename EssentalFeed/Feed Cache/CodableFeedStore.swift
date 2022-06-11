@@ -1,12 +1,11 @@
 //
-//  CodableFeedStore.swift
+//  CodableFeedCache.swift
 //  EssentalFeed
 //
-//  Created by Austin Betzer on 4/6/22.
+//  Created by Austin Betzer on 6/11/22.
 //
 
 import Foundation
-
 
 public class CodableFeedStore: FeedStore {
     private struct Cache: Codable {

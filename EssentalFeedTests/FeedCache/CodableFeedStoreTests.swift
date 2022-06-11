@@ -2,10 +2,10 @@
 //  CodableFeedStoreTests.swift
 //  EssentalFeedTests
 //
-//  Created by Austin Betzer on 4/5/22.
+//  Created by Austin Betzer on 6/11/22.
 //
 
-import XCTest
+import Foundation
 import EssentalFeed
 
 class CodableFeedStoreTests: XCTestCase, FeedStoreSpecs, FailableFeedStoreSpecs {
