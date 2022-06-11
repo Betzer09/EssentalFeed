@@ -42,14 +42,14 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4DA-ty-VT0">
                                                             <rect key="frame" x="0.0" y="0.0" width="15" height="37"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin.and.ellipse" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="F0W-Bg-Vkv">
-                                                                    <rect key="frame" x="0.0" y="-0.5" width="15" height="20.5"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="F0W-Bg-Vkv">
+                                                                    <rect key="frame" x="0.0" y="3" width="15" height="14"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="15" id="Cdo-vc-HAn"/>
-                                                                <constraint firstItem="F0W-Bg-Vkv" firstAttribute="top" secondItem="4DA-ty-VT0" secondAttribute="top" id="GCe-bT-EPq"/>
+                                                                <constraint firstItem="F0W-Bg-Vkv" firstAttribute="top" secondItem="4DA-ty-VT0" secondAttribute="top" constant="3" id="GCe-bT-EPq"/>
                                                                 <constraint firstAttribute="trailing" secondItem="F0W-Bg-Vkv" secondAttribute="trailing" id="kqv-R3-zis"/>
                                                                 <constraint firstItem="F0W-Bg-Vkv" firstAttribute="leading" secondItem="4DA-ty-VT0" secondAttribute="leading" id="wD4-gP-3ZM"/>
                                                             </constraints>
@@ -137,7 +137,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <image name="pin" width="10" height="14"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
