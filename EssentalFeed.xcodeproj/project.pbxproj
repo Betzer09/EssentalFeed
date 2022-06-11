@@ -27,6 +27,8 @@
 		23C2049427D03D4D00320D19 /* EssentalFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237E23B627B414DE005EB1F4 /* EssentalFeed.framework */; };
 		23C2049A27D041BA00320D19 /* XCTestCase+MemeoryLeakTrackingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B3E6FD27CE69800049D7D0 /* XCTestCase+MemeoryLeakTrackingHelper.swift */; };
 		23D3F4292854F9F90054C4C9 /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3F4282854F9F90054C4C9 /* FeedViewControllerTests.swift */; };
+		23D3F42B2854FC4A0054C4C9 /* EssentalFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237E23B627B414DE005EB1F4 /* EssentalFeed.framework */; platformFilter = ios; };
+		23D3F42C2854FC4A0054C4C9 /* EssentalFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 237E23B627B414DE005EB1F4 /* EssentalFeed.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		23EE8E9D2854E50F006912F0 /* FeedCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE8E992854E50E006912F0 /* FeedCachePolicy.swift */; };
 		23EE8E9E2854E50F006912F0 /* LocalFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE8E9A2854E50E006912F0 /* LocalFeedImage.swift */; };
 		23EE8E9F2854E50F006912F0 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE8E9B2854E50F006912F0 /* FeedStore.swift */; };
@@ -64,7 +66,28 @@
 			remoteGlobalIDString = 237E23B527B414DE005EB1F4;
 			remoteInfo = EssentalFeed;
 		};
+		23D3F42D2854FC4A0054C4C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 237E23AD27B414DE005EB1F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 237E23B527B414DE005EB1F4;
+			remoteInfo = EssentalFeed;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		23D3F42F2854FC4B0054C4C9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				23D3F42C2854FC4A0054C4C9 /* EssentalFeed.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		232BC0B927FF58E900862824 /* FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpecs.swift; sourceTree = "<group>"; };
@@ -112,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23D3F42B2854FC4A0054C4C9 /* EssentalFeed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +244,7 @@
 				232BC0D22804958D00862824 /* EssentalFeediOS */,
 				232BC0DC2804958D00862824 /* EssentalFeediOSTests */,
 				237E23B727B414DE005EB1F4 /* Products */,
+				23D3F42A2854FC4A0054C4C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -305,6 +330,13 @@
 			path = FeedAPI;
 			sourceTree = "<group>";
 		};
+		23D3F42A2854FC4A0054C4C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -334,10 +366,12 @@
 				232BC0CD2804958D00862824 /* Sources */,
 				232BC0CE2804958D00862824 /* Frameworks */,
 				232BC0CF2804958D00862824 /* Resources */,
+				23D3F42F2854FC4B0054C4C9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				23D3F42E2854FC4A0054C4C9 /* PBXTargetDependency */,
 			);
 			name = EssentalFeediOS;
 			productName = EssentalFeediOS;
@@ -586,6 +620,12 @@
 			isa = PBXTargetDependency;
 			target = 237E23B527B414DE005EB1F4 /* EssentalFeed */;
 			targetProxy = 23C2049527D03D4D00320D19 /* PBXContainerItemProxy */;
+		};
+		23D3F42E2854FC4A0054C4C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 237E23B527B414DE005EB1F4 /* EssentalFeed */;
+			targetProxy = 23D3F42D2854FC4A0054C4C9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
