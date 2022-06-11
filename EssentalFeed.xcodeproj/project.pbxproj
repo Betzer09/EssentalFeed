@@ -26,6 +26,7 @@
 		23C2049327D03D4D00320D19 /* EssentalFeedAPIEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C2049227D03D4D00320D19 /* EssentalFeedAPIEndToEndTests.swift */; };
 		23C2049427D03D4D00320D19 /* EssentalFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237E23B627B414DE005EB1F4 /* EssentalFeed.framework */; };
 		23C2049A27D041BA00320D19 /* XCTestCase+MemeoryLeakTrackingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B3E6FD27CE69800049D7D0 /* XCTestCase+MemeoryLeakTrackingHelper.swift */; };
+		23D3F4292854F9F90054C4C9 /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3F4282854F9F90054C4C9 /* FeedViewControllerTests.swift */; };
 		23EE8E9D2854E50F006912F0 /* FeedCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE8E992854E50E006912F0 /* FeedCachePolicy.swift */; };
 		23EE8E9E2854E50F006912F0 /* LocalFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE8E9A2854E50E006912F0 /* LocalFeedImage.swift */; };
 		23EE8E9F2854E50F006912F0 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE8E9B2854E50F006912F0 /* FeedStore.swift */; };
@@ -87,6 +88,8 @@
 		23B3E6FD27CE69800049D7D0 /* XCTestCase+MemeoryLeakTrackingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemeoryLeakTrackingHelper.swift"; sourceTree = "<group>"; };
 		23C2049027D03D4D00320D19 /* EssentalFeedAPIEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentalFeedAPIEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C2049227D03D4D00320D19 /* EssentalFeedAPIEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentalFeedAPIEndToEndTests.swift; sourceTree = "<group>"; };
+		23D3F4272854F9F90054C4C9 /* EssentalFeediOSTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EssentalFeediOSTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		23D3F4282854F9F90054C4C9 /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
 		23EE8E992854E50E006912F0 /* FeedCachePolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
 		23EE8E9A2854E50E006912F0 /* LocalFeedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalFeedImage.swift; sourceTree = "<group>"; };
 		23EE8E9B2854E50F006912F0 /* FeedStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 		232BC0DC2804958D00862824 /* EssentalFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				23D3F4282854F9F90054C4C9 /* FeedViewControllerTests.swift */,
+				23D3F4272854F9F90054C4C9 /* EssentalFeediOSTests-Bridging-Header.h */,
 			);
 			path = EssentalFeediOSTests;
 			sourceTree = "<group>";
@@ -426,6 +431,7 @@
 					};
 					232BC0D72804958D00862824 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1340;
 					};
 					237E23B527B414DE005EB1F4 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -510,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23D3F4292854F9F90054C4C9 /* FeedViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,16 +652,25 @@
 		232BC0E42804958D00862824 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RE524LJXV2;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.strides.EssentalFeediOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "EssentalFeediOSTests/EssentalFeediOSTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -662,16 +678,24 @@
 		232BC0E52804958D00862824 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RE524LJXV2;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.strides.EssentalFeediOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "EssentalFeediOSTests/EssentalFeediOSTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
