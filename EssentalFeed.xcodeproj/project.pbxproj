@@ -30,6 +30,7 @@
 		23D3F42B2854FC4A0054C4C9 /* EssentalFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237E23B627B414DE005EB1F4 /* EssentalFeed.framework */; platformFilter = ios; };
 		23D3F42C2854FC4A0054C4C9 /* EssentalFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 237E23B627B414DE005EB1F4 /* EssentalFeed.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		23D3F4312854FD550054C4C9 /* XCTestCase+MemeoryLeakTrackingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B3E6FD27CE69800049D7D0 /* XCTestCase+MemeoryLeakTrackingHelper.swift */; };
+		23D3F433285506760054C4C9 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3F432285506760054C4C9 /* FeedViewController.swift */; };
 		23EE8E9D2854E50F006912F0 /* FeedCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE8E992854E50E006912F0 /* FeedCachePolicy.swift */; };
 		23EE8E9E2854E50F006912F0 /* LocalFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE8E9A2854E50E006912F0 /* LocalFeedImage.swift */; };
 		23EE8E9F2854E50F006912F0 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE8E9B2854E50F006912F0 /* FeedStore.swift */; };
@@ -114,6 +115,7 @@
 		23C2049227D03D4D00320D19 /* EssentalFeedAPIEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentalFeedAPIEndToEndTests.swift; sourceTree = "<group>"; };
 		23D3F4272854F9F90054C4C9 /* EssentalFeediOSTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EssentalFeediOSTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		23D3F4282854F9F90054C4C9 /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
+		23D3F432285506760054C4C9 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		23EE8E992854E50E006912F0 /* FeedCachePolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
 		23EE8E9A2854E50E006912F0 /* LocalFeedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalFeedImage.swift; sourceTree = "<group>"; };
 		23EE8E9B2854E50F006912F0 /* FeedStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		232BC0D22804958D00862824 /* EssentalFeediOS */ = {
 			isa = PBXGroup;
 			children = (
+				23D3F432285506760054C4C9 /* FeedViewController.swift */,
 			);
 			path = EssentalFeediOS;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				TargetAttributes = {
 					232BC0D02804958D00862824 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1340;
 					};
 					232BC0D72804958D00862824 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -544,6 +548,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23D3F433285506760054C4C9 /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +640,7 @@
 		232BC0E12804958D00862824 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -657,6 +663,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -664,6 +672,7 @@
 		232BC0E22804958D00862824 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -686,6 +695,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -694,6 +704,7 @@
 		232BC0E42804958D00862824 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -720,6 +731,7 @@
 		232BC0E52804958D00862824 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
