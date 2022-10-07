@@ -58,6 +58,7 @@
 		23EE8EB02854E67E006912F0 /* RemoteFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE8EA52854E53B006912F0 /* RemoteFeedItem.swift */; };
 		23EE8EB12854E67E006912F0 /* FeedItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE8EA32854E53B006912F0 /* FeedItemsMapper.swift */; };
 		23EE8EB32854E7DA006912F0 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE8EB22854E7DA006912F0 /* URLSessionHTTPClientTests.swift */; };
+		23F9627228F090120022B17A /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F9627128F090120022B17A /* FeedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +160,7 @@
 		23EE8EB22854E7DA006912F0 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		23EE8EB42854EA8D006912F0 /* CodableFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStoreTests.swift; sourceTree = "<group>"; };
 		23EE8EB62854EAC6006912F0 /* CodableFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStore.swift; sourceTree = "<group>"; };
+		23F9627128F090120022B17A /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,6 +348,7 @@
 		23A74FB328ADC6060093AE58 /* Feed UI */ = {
 			isa = PBXGroup;
 			children = (
+				23F9627028F090010022B17A /* Modals */,
 				23A74FCB28ADCEAC0093AE58 /* Composors */,
 				23A74FB528ADC6140093AE58 /* Views */,
 				23A74FB428ADC60C0093AE58 /* Controllers */,
@@ -429,6 +432,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23F9627028F090010022B17A /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				23F9627128F090120022B17A /* FeedViewModel.swift */,
+			);
+			path = Modals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -644,6 +655,7 @@
 				23D3F433285506760054C4C9 /* FeedViewController.swift in Sources */,
 				2390D8EF28611E8200DD0A11 /* FeedImageCell.swift in Sources */,
 				23A74FCA28ADCC130093AE58 /* FeedImageCellController.swift in Sources */,
+				23F9627228F090120022B17A /* FeedViewModel.swift in Sources */,
 				23A74FCD28ADCEB70093AE58 /* FeedUIComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
