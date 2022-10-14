@@ -59,7 +59,6 @@
 		23EE8EB02854E67E006912F0 /* RemoteFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE8EA52854E53B006912F0 /* RemoteFeedItem.swift */; };
 		23EE8EB12854E67E006912F0 /* FeedItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE8EA32854E53B006912F0 /* FeedItemsMapper.swift */; };
 		23EE8EB32854E7DA006912F0 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE8EB22854E7DA006912F0 /* URLSessionHTTPClientTests.swift */; };
-		23F9627228F090120022B17A /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F9627128F090120022B17A /* FeedViewModel.swift */; };
 		23F9627428F092320022B17A /* FeedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F9627328F092320022B17A /* FeedImageViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -163,7 +162,6 @@
 		23EE8EB22854E7DA006912F0 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		23EE8EB42854EA8D006912F0 /* CodableFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStoreTests.swift; sourceTree = "<group>"; };
 		23EE8EB62854EAC6006912F0 /* CodableFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStore.swift; sourceTree = "<group>"; };
-		23F9627128F090120022B17A /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		23F9627328F092320022B17A /* FeedImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -450,7 +448,6 @@
 		23F9627028F090010022B17A /* Modals */ = {
 			isa = PBXGroup;
 			children = (
-				23F9627128F090120022B17A /* FeedViewModel.swift */,
 				23F9627328F092320022B17A /* FeedImageViewModel.swift */,
 			);
 			path = Modals;
@@ -671,7 +668,6 @@
 				2390D8EF28611E8200DD0A11 /* FeedImageCell.swift in Sources */,
 				23F9627428F092320022B17A /* FeedImageViewModel.swift in Sources */,
 				23A74FCA28ADCC130093AE58 /* FeedImageCellController.swift in Sources */,
-				23F9627228F090120022B17A /* FeedViewModel.swift in Sources */,
 				23A74FCD28ADCEB70093AE58 /* FeedUIComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
